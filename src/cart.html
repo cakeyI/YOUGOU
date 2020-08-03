@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="./font/iconfont.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="head" id="he">
+        <ul class="head_left">
+            <li>
+                <a href="javascript:;" class="head_a heada1">关注</a>
+                <div class="codeOne" style="display: none;z-index: 10;">
+                    <img src="./img/weChat.jpg" alt="">
+                    <p>关注公众号</p>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;" class="head_a heada2">下载APP</a>
+                <div class="codeTwo" style="display: none;z-index: 100000;">
+                    <img src="./img/app.jpg" alt="">
+                    <p>优质APP下载</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="head_right">
+            <li>
+                <a href="javascript:;" class="head_a">登录</a>
+                <span>&nbsp;/&nbsp;</span>
+                <a href="javascript:;" class="head_a">注册</a>
+            </li>
+            <li>
+
+                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true" style="color: white;">
+                    <use xlink:href="#icon-shoucang"></use>
+                  </svg>收藏</a>
+            </li>
+            <li>
+
+                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gouwudai"></use>
+                  </svg>购物车</a>
+            </li>
+            <li class="heada3">
+                <a href="javascript:;" class="head_a">公告</a>
+                <div class="notice" style="display:none;z-index: 1000;">
+                    <ul>
+                        <li><a href="javascript:;">近期物流情况安排通知</a></li>
+                        <li><a href="javascript:;">优购客服电话变更</a></li>
+                        <li><a href="javascript:;">关闭分享购频道</a></li>
+                        <li><a href="javascript:;">提醒会员谨防诈骗电话</a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <!-- logo -->
+    <div class="logo_head">
+        <div class="logo_head_content">
+            <h2 class="logo_head_log">
+                <a href="https://www.yougou.com"><img src="./img/signin-register-logo.png" alt=""></a>
+            </h2>
+            <p class="logo_head_p">
+                <!-- 用户登录 -->
+            </p>
+        </div>
+    </div>
+
+
+    <!-- 商品内容 -->
+    <div class="box">
+        <!-- 表格部分 -->
+        <table class="cart_list_tb">
+            <colgroup>
+                <col width="60">
+                <col width="370">
+                <col width="110">
+                <col width="110">
+                <col width="110">
+                <col width="110">
+                <col width="120">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <label class="ygChkbox">
+                            <input class="checkbox" type="checkbox"  checked="checked">
+                                全选
+                        </label>
+                    </th>
+                    <th>
+                        <span class="pr25">商品名称</span>
+                    </th>
+                    <th>颜色尺码</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计(元)</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <!-- 从这里渲染tr -->
+                <tr>
+                    <td id="tr_td" colspan="7">
+                        <div class="td_div">
+                            <input type="checkbox" class="checkbox">
+                            <div class="imgbox">
+                                <img src="./img/app.jpg" alt="">
+                            </div>
+                            <p class="goodstitle">BELLE/百丽箱包2020夏新商场同款化纤布/人造革时尚背提包X5107BX0</p>
+                            <div class="sizebox">
+                                <p><span>颜色：</span>黑色</p>
+                                <p><span>尺码：</span>F</p>
+                            </div>
+                            <span class="price">319</span>
+                            <div class="goods_num">
+                                <a href="javascript:;">-</a>
+                                <input type="text" value="1">
+                                <a href="javascript:;">+</a>
+                            </div>
+                            <span class="priceall">319</span>
+                            <div class="operator">
+                                <a href="javascript:;" class="remove">移入收藏夹</a>
+                                <a href="javascript:;" class="del">删除</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td id="tr_td" colspan="7">
+                        <div class="td_div">
+                            <input type="checkbox" class="checkbox">
+                            <div class="imgbox">
+                                <img src="./img/app.jpg" alt="">
+                            </div>
+                            <p class="goodstitle">BELLE/百丽箱包2020夏新商场同款化纤布/人造革时尚背提包X5107BX0</p>
+                            <div class="sizebox">
+                                <p><span>颜色：</span>黑色</p>
+                                <p><span>尺码：</span>F</p>
+                            </div>
+                            <span class="price">319</span>
+                            <div class="goods_num">
+                                <a href="javascript:;">-</a>
+                                <input type="text" value="1">
+                                <a href="javascript:;">+</a>
+                            </div>
+                            <span class="priceall">319</span>
+                            <div class="operator">
+                                <a href="javascript:;" class="remove">移入收藏夹</a>
+                                <a href="javascript:;" class="del">删除</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tr_td" colspan="7">
+                        <div class="td_div">
+                            <input type="checkbox" class="checkbox">
+                            <div class="imgbox">
+                                <img src="./img/app.jpg" alt="">
+                            </div>
+                            <p class="goodstitle">BELLE/百丽箱包2020夏新商场同款化纤布/人造革时尚背提包X5107BX0</p>
+                            <div class="sizebox">
+                                <p><span>颜色：</span>黑色</p>
+                                <p><span>尺码：</span>F</p>
+                            </div>
+                            <span class="price">319</span>
+                            <div class="goods_num">
+                                <a href="javascript:;">-</a>
+                                <input type="text" value="1">
+                                <a href="javascript:;">+</a>
+                            </div>
+                            <span class="priceall">319</span>
+                            <div class="operator">
+                                <a href="javascript:;" class="remove">移入收藏夹</a>
+                                <a href="javascript:;" class="del">删除</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="shpcrt_operations">
+            <label class="ygChkbox">
+                        <input class="none" type="checkbox">
+                            全选
+             </label>
+            <a class="JsFavorite" href="javascript:;">移入收藏夹</a>
+            <a class="JsRemoveGood" href="javascript:;">删除</a>
+
+        </div>
+
+
+        <div class="cen cart_gray_box_ft">
+            <a href="/" class="cart_goon_link mt5 ml20 fl">继续购物</a>
+            <div class="fl mt15">
+                <a href="javascript:;" class="cblue ml20 clearShopcart">清空购物袋</a>
+            </div>
+            <div class="fr">
+                <strong>总计（不含运费
+                    ）：</strong><strong class="cgray f16">¥</strong><strong class="corg f20">319</strong>
+                <a href="javascript:;" class="cart_b_paybtn ml10 ">去结算</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- 页脚 -->
+    <div class="footer Gray">
+        <p class="tright" style="color: #666;">Copyright © 2011-2014 Yougou Technology Co., Ltd. <span style="color:#AAA;padding: 0 20px;">粤ICP备09070608号-4</span> 增值电信业务经营许可证：<span style="color:#AAA;padding: 0 20px;">粤 B2-20090203</span</p>
+    </div>
+ 
+
+
+
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
+    <script src="./script/cart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/regsitry.css">
+    <script src="./font/iconfont.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="head" id="he">
+        <ul class="head_left">
+            <li>
+                <a href="javascript:;" class="head_a heada1">关注</a>
+                <div class="codeOne" style="display: none;z-index: 10;">
+                    <img src="./img/weChat.jpg" alt="">
+                    <p>关注公众号</p>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;" class="head_a heada2">下载APP</a>
+                <div class="codeTwo" style="display: none;z-index: 100000;">
+                    <img src="./img/app.jpg" alt="">
+                    <p>优质APP下载</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="head_right">
+            <li>
+                <a href="javascript:;" class="head_a">登录</a>
+                <span>&nbsp;/&nbsp;</span>
+                <a href="javascript:;" class="head_a">注册</a>
+            </li>
+            <li>
+
+                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true" style="color: white;">
+                    <use xlink:href="#icon-shoucang"></use>
+                  </svg>收藏</a>
+            </li>
+            <li>
+
+                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gouwudai"></use>
+                  </svg>购物车</a>
+            </li>
+            <li class="heada3">
+                <a href="javascript:;" class="head_a">公告</a>
+                <div class="notice" style="display:none;z-index: 1000;">
+                    <ul>
+                        <li><a href="javascript:;">近期物流情况安排通知</a></li>
+                        <li><a href="javascript:;">优购客服电话变更</a></li>
+                        <li><a href="javascript:;">关闭分享购频道</a></li>
+                        <li><a href="javascript:;">提醒会员谨防诈骗电话</a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <!-- logo -->
+    <div class="logo_head">
+        <div class="logo_head_content">
+            <h2 class="logo_head_log">
+                <a href="https://www.yougou.com"><img src="./img/signin-register-logo.png" alt=""></a>
+            </h2>
+            <p class="logo_head_p">
+                新用户注册
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <a href="http://www.yougou.com" target="_blank" class="cen-new" style="background: url('http://i2.ygimg.cn/pics/shop/cms/image/cms/2018/06/28/ba839750211e4c6485fe16dea496b709.jpg') no-repeat top center;position: absolute;top: 0;left: 0;z-index: 0"></a>
+
+        <div class="nreg_box clearfix">
+            <div id="emailDiv" class="nreg_left fr">
+                <ul class="tab_sig_reg clearfix">
+                    <li class="tab_sig"><a href="#" style="color: black;">登录</a></li>
+                    <li class="tab_reg tab_cur"><a href="#" style="color: white;">注册</a></li>
+                </ul>
+                <form class="nreg_form" method="" name="">
+                    <dl class="nreg_item" id="mobile_nreg_item">
+                        <dd>
+                            <div class="nreg_input_bg rel">
+                                <label class="lab1 nreg_mob_ema"><span class="fl" style="float: left;">手机号</span></label>
+                                <input type="text" name="mobile" id="reg_mobile_" class="nreg_input" valid="Mobile" placeholder="请输入您的手机号码">
+                            </div>
+                        </dd>
+                        <dt>
+                        <div id="reg_mobile_tip" class="errortips"></div>
+                        </dt>
+                    </dl>
+                    <dl id="dlCode" class="nreg_item email_regitem mobile_regitem clearfix rel">
+                        <dd>
+                            <div class="nreg_input_bg fl" style="width:200px">
+                                <label class="lab1" for="reg_checkcode">验证码</label>
+                                <input type="text" name="reg_checkcode" id="code2_" class="nreg_sinput" maxlength="4" valid="IdentifyCode" style="width: 128px">
+                            </div>
+                            <div class="fr" style="margin-right: 17px;">
+                                <!-- <img id="imageValidate2" class="changeImg" src="https://passport.yougou.com/servlet/imageCaptcha?rand=0.786554033581095"> -->
+                            </div>
+                        </dd>
+                        <dt>
+                        <div id="code2_tip" class="errortips"></div>
+                        </dt>
+                    </dl>
+                    <dl id="dlMobileCode" class="nreg_item mobile_regitem clearfix rel">
+                        <dd>
+                            <div class="nreg_input_bg fl" style="width:235px;">
+                                <label class="lab1" for="reg_mobile_code_">短信验证码</label>
+                                <input type="text" name="mobilecode" id="reg_mobile_code_" class="nreg_sinput" valid="MsgIdentifyCode" style="width: 155px;">
+                            </div>
+                            <div class="fr">
+                                <a id="sendMsgBtn" href="javascript:;" class="regAutoBtn_1" style="float: right;">
+                                    <span style="margin-left:0;" id="getMsgSpan">获取验证码</span>
+                                </a>
+                            </div>
+                        </dd>
+                        <dt>
+
+                        <div id="sendMsgTips"  data-msg="sendmsgtips"></div>
+                        </dt>
+                    </dl>
+                    <dl class="nreg_item clearfix rel" style="position: relative;">
+                        <div style="position:absolute;top:38px;right: 17px;">
+                            <div id="pwdStrength" class="pwdStrength none">
+                                <em>低</em><em>中</em><em>高</em>
+                            </div>
+                        </div>
+                        <dd>
+                            <div class="nreg_input_bg" style="position: relative;">
+                                <label class="lab1" for="reg_password_">密码</label>
+                                <input type="password" name="password1" id="reg_password_" class="nreg_input" maxlength="25" valid="Password" placeholder="字母、数字、符号均可，6-25个字符以内">
+                            </div>
+                        </dd>
+                        <dt>
+                        <div id="reg_password_tip1" class="errortips"></div>
+                        </dt>
+                    </dl>
+                    <dl class="nreg_item clearfix rel">
+                        <dd>
+                            <div class="nreg_input_bg">
+                                <label class="lab1" for="reg_password2">确认密码</label>
+                                <input type="password" id="reg_password2" class="nreg_input" maxlength="25" valid="RePassword">
+                            </div>
+                        </dd>
+                        <dt>
+                        <div id="reg_password_tip2" class="errortips"></div>
+                        </dt>
+                    </dl>
+                    <p style="text-align: center;margin-bottom: 10px;">
+                        <span> <input type="checkbox" id="rules" name="rules" style="margin-top:0" checked="checked"> </span>
+                        <label style="padding-left:3px" for="rules">我已阅读并同意《优购会员注册协议》</label>
+                        <span id="ruleTips"></span>
+                    </p>
+                    <p style="text-align: center" style="margin-top:5px;overflow: hidden;">
+                        <a href="javascript:void();" class="nreg_submit"><input type="submit" title="立即注册" value="确认并注册" id="reg_buton"></a>
+                    </p>
+                    <input type="hidden" name="4S1B1c9z9M" value="0s5x0l" id="reg_nonce_id">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 页脚 -->
+    <div class="footer Gray">
+        <p class="tright" style="color: #666;">Copyright © 2011-2014 Yougou Technology Co., Ltd. <span style="color:#AAA;padding: 0 20px;">粤ICP备09070608号-4</span> 增值电信业务经营许可证：<span style="color:#AAA;padding: 0 20px;">粤 B2-20090203</span</p>
+    </div>
+ 
+
+
+
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
+    <script src="./script/regsitry.js"></script>
+
+</body>
+
+</html>
