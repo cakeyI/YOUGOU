@@ -17,6 +17,7 @@
             overflow: hidden;
         }
     </style>
+    <script src="script/require.js" defer async="true" data-main="script/main.js" id="currentpage" currentmod="modreg"></script>
 
 </head>
 
@@ -41,9 +42,15 @@
         </ul>
         <ul class="head_right">
             <li>
-                <a href="javascript:;" class="head_a">登录</a>
-                <span>&nbsp;/&nbsp;</span>
-                <a href="javascript:;" class="head_a">注册</a>
+                <div class="cookie" style="width: 150px;height: 40px;color: white; display: none;">
+                    <span style="color: white;height: 40px;line-height: 40px;"></span>
+                    <a href="javascript:;" class="head_a">退出</a>
+                </div>
+                <div class="regsitry">
+                    <a href="login.html" class="head_a">登录</a>
+                    <span>&nbsp;/&nbsp;</span>
+                    <a href="registry.html" class="head_a">注册</a>
+                </div>
             </li>
             <li>
 
@@ -53,7 +60,7 @@
             </li>
             <li>
 
-                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true">
+                <a href="cart.html" class="head_a"><svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-gouwudai"></use>
                   </svg>购物车</a>
             </li>
@@ -76,7 +83,7 @@
     <div class="logo_head">
         <div class="logo_head_content">
             <h2 class="logo_head_log">
-                <a href="https://www.yougou.com"><img src="./img/signin-register-logo.png" alt=""></a>
+                <a href="index.html"><img src="./img/signin-register-logo.png" alt=""></a>
             </h2>
             <p class="logo_head_p">
                 新用户注册
@@ -84,24 +91,26 @@
         </div>
     </div>
     <div class="content">
-        <a href="http://www.yougou.com" target="_blank" class="cen-new" style="background: url('http://i2.ygimg.cn/pics/shop/cms/image/cms/2018/06/28/ba839750211e4c6485fe16dea496b709.jpg') no-repeat top center;position: absolute;top: 0;left: 0;z-index: 0"></a>
+        <a href="javascript:;" target="_blank" class="cen-new" style="background: url('http://i2.ygimg.cn/pics/shop/cms/image/cms/2018/06/28/ba839750211e4c6485fe16dea496b709.jpg') no-repeat top center;position: absolute;top: 0;left: 0;z-index: 0"></a>
 
         <div class="nreg_box clearfix">
             <div id="emailDiv" class="nreg_left fr">
                 <ul class="tab_sig_reg clearfix">
-                    <li class="tab_sig"><a href="#" style="color: black;">登录</a></li>
-                    <li class="tab_reg tab_cur"><a href="#" style="color: white;">注册</a></li>
+                    <li class="tab_sig"><a href="login.html" style="color: black;">登录</a></li>
+                    <li class="tab_reg tab_cur"><a href="javascript:;" style="color: white;">注册</a></li>
                 </ul>
-                <form class="nreg_form" method="" name="">
+                <form class="nreg_form" method="post" name="" action="http://localhost/YOUGOU/php/registry.php">
                     <dl class="nreg_item" id="mobile_nreg_item">
                         <dd>
                             <div class="nreg_input_bg rel">
                                 <label class="lab1 nreg_mob_ema"><span class="fl" style="float: left;">手机号</span></label>
-                                <input type="text" name="mobile" id="reg_mobile_" class="nreg_input" valid="Mobile" placeholder="请输入您的手机号码">
+                                <input type="text" name="phone" id="reg_mobile_" class="nreg_input" valid="Mobile" placeholder="请输入您的手机号码">
                             </div>
                         </dd>
                         <dt>
-                        <div id="reg_mobile_tip" class="errortips"></div>
+
+                            <!-- 两个类名errortips   righttips -->
+                        <div id="reg_mobile_tip" class=""></div>
                         </dt>
                     </dl>
                     <dl id="dlCode" class="nreg_item email_regitem mobile_regitem clearfix rel">
@@ -111,11 +120,11 @@
                                 <input type="text" name="reg_checkcode" id="code2_" class="nreg_sinput" maxlength="4" valid="IdentifyCode" style="width: 128px">
                             </div>
                             <div class="fr" style="margin-right: 17px;">
-                                <!-- <img id="imageValidate2" class="changeImg" src="https://passport.yougou.com/servlet/imageCaptcha?rand=0.786554033581095"> -->
+                                <img id="imageValidate2" class="changeImg" src="https://passport.yougou.com/servlet/imageCaptcha?rand=0.786554033581095">
                             </div>
                         </dd>
                         <dt>
-                        <div id="code2_tip" class="errortips"></div>
+                        <div id="code2_tip" class=""></div>
                         </dt>
                     </dl>
                     <dl id="dlMobileCode" class="nreg_item mobile_regitem clearfix rel">
@@ -132,7 +141,7 @@
                         </dd>
                         <dt>
 
-                        <div id="sendMsgTips"  data-msg="sendmsgtips"></div>
+                        <div id="sendMsgTips"  data-msg="sendmsgtips" class=""></div>
                         </dt>
                     </dl>
                     <dl class="nreg_item clearfix rel" style="position: relative;">
@@ -148,27 +157,27 @@
                             </div>
                         </dd>
                         <dt>
-                        <div id="reg_password_tip1" class="errortips"></div>
+                        <div id="reg_password_tip1" class=""></div>
                         </dt>
                     </dl>
-                    <dl class="nreg_item clearfix rel">
+                    <dl class="nreg_item clearfix rel" style="overflow: hidden;">
                         <dd>
                             <div class="nreg_input_bg">
                                 <label class="lab1" for="reg_password2">确认密码</label>
-                                <input type="password" id="reg_password2" class="nreg_input" maxlength="25" valid="RePassword">
+                                <input type="password" name="password2" id="reg_password2" class="nreg_input" maxlength="25" valid="RePassword">
                             </div>
                         </dd>
                         <dt>
-                        <div id="reg_password_tip2" class="errortips"></div>
+                        <div id="reg_password_tip2" class=""></div>
                         </dt>
                     </dl>
-                    <p style="text-align: center;margin-bottom: 10px;">
-                        <span> <input type="checkbox" id="rules" name="rules" style="margin-top:0" checked="checked"> </span>
+                    <p style="text-align: center;margin-bottom: 10px;margin-top: 5px;overflow: hidden;">
+                        <span> <input type="checkbox" id="rules" name="rules" style="margin-top:0"  checked="checked" > </span>
                         <label style="padding-left:3px" for="rules">我已阅读并同意《优购会员注册协议》</label>
                         <span id="ruleTips"></span>
                     </p>
                     <p style="text-align: center" style="margin-top:5px;overflow: hidden;">
-                        <a href="javascript:void();" class="nreg_submit"><input type="submit" title="立即注册" value="确认并注册" id="reg_buton"></a>
+                        <a href="javascript;" class="nreg_submit"><input type="submit" name="submit" title="立即注册" value="确认并注册" id="reg_buton"></a>
                     </p>
                     <input type="hidden" name="4S1B1c9z9M" value="0s5x0l" id="reg_nonce_id">
                 </form>
@@ -186,9 +195,9 @@
 
 
 
-
+<!-- 
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
-    <script src="./script/regsitry.js"></script>
+    <script src="./script/regsitry.js"></script> -->
 
 </body>
 

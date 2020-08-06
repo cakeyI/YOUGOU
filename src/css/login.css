@@ -187,3 +187,36 @@
     margin-top: 20px;
     overflow: hidden;
 }
+
+.errortips {
+    /* background-position: -180px -95px; */
+    color: #333;
+    margin-top: 4px;
+    display: inline-block;
+    text-indent: 25px;
+    line-height: 18px;
+    height: 18px;
+    background: url(../img/微信图片_20200805213211.png) no-repeat left center;
+    /* background-color: blue; */
+}
+
+.righttips {
+    margin-top: 0;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding-left: 25px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    color: #009645;
+    /* background-position: -314px 0; */
+    background: url(../img/微信图片_20200805213930正确.png) no-repeat center center;
+}
+
+
+/* onblur事件 */
+
+.blur {
+    border: 1px solid black;
+}

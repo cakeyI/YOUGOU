@@ -17,6 +17,7 @@
             overflow: hidden;
         }
     </style>
+    <script src="script/require.js" defer async="true" data-main="script/main.js" id="currentpage" currentmod="modlogin"></script>
 
 </head>
 
@@ -41,9 +42,15 @@
         </ul>
         <ul class="head_right">
             <li>
-                <a href="javascript:;" class="head_a">登录</a>
-                <span>&nbsp;/&nbsp;</span>
-                <a href="javascript:;" class="head_a">注册</a>
+                <div class="cookie" style="width: 150px;height: 40px;color: white; display: none;">
+                    <span style="color: white;height: 40px;line-height: 40px;"></span>
+                    <a href="javascript:;" class="head_a">退出</a>
+                </div>
+                <div class="regsitry">
+                    <a href="login.html" class="head_a">登录</a>
+                    <span>&nbsp;/&nbsp;</span>
+                    <a href="registry.html" class="head_a">注册</a>
+                </div>
             </li>
             <li>
 
@@ -53,7 +60,7 @@
             </li>
             <li>
 
-                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true">
+                <a href="cart.html" class="head_a"><svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-gouwudai"></use>
                   </svg>购物车</a>
             </li>
@@ -76,7 +83,7 @@
     <div class="logo_head">
         <div class="logo_head_content">
             <h2 class="logo_head_log">
-                <a href="https://www.yougou.com"><img src="./img/signin-register-logo.png" alt=""></a>
+                <a href="index.html"><img src="./img/signin-register-logo.png" alt=""></a>
             </h2>
             <p class="logo_head_p">
                 用户登录
@@ -84,26 +91,26 @@
         </div>
     </div>
     <div class="content">
-        <a href="http://www.yougou.com" target="_blank" class="cen-new" style="background: url('http://i2.ygimg.cn/pics/shop/cms/image/cms/2018/06/28/ba839750211e4c6485fe16dea496b709.jpg') no-repeat top center;position: absolute;top: 0;left: 0;z-index: 0"></a>
+        <a href="javascript:;" target="_blank" class="cen-new" style="background: url('http://i2.ygimg.cn/pics/shop/cms/image/cms/2018/06/28/ba839750211e4c6485fe16dea496b709.jpg') no-repeat top center;position: absolute;top: 0;left: 0;z-index: 0"></a>
 
         <div class="form1" style="left: 50%;margin-left: 115px;position: absolute;top: 0;width: 378px;z-index: 20;">
             <div class="form1_content">
                 <ul class="form1_content_ul">
-                    <li><a href="#">帐户密码登录</a></li>
-                    <li><a href="javascript:a();">手机号快捷登录</a></li>
+                    <li><a href="javascript:a();">帐户密码登录</a></li>
+                    <li><a href="registry.html">注册</a></li>
                 </ul>
                 <div class="form1_form">
-                    <form onsubmit="return false;" id="loginform" method="post">
+                    <form id="loginform" action="">
                         <dl class="nreg_item clearfix">
                             <dd>
                                 <div class="nreg_input_bg">
                                     <svg class="icon" aria-hidden="true" style="width: 22px;height:22px;color:gray;margin:5px 15px">
                                             <use xlink:href="#icon-zhanghao1"></use>
                                           </svg>
-                                    <input type="text" name="email" placeholder="手机号/会员名称/邮箱" id="email_" class="nreg_input" maxlength="50" value="">
+                                    <input type="text" name="phone" placeholder="手机号/会员名称/邮箱" id="email_" class="nreg_input" maxlength="50" value="">
                                 </div>
                             </dd>
-                            <dt><div id="login_email_tip" class="errortips"></div></dt>
+                            <dt><div id="login_email_tip" class=""></div></dt>
                         </dl>
                         <dl class="nreg_item clearfix">
                             <dd>
@@ -115,7 +122,7 @@
                                     <input type="password" name="password" placeholder="请输入密码" id="password_" class="nreg_input" maxlength="50" curcapslockid="0">
                                 </div>
                             </dd>
-                            <dt><div id="login_password_tip" class="errortips"></div></dt>
+                            <dt><div id="login_password_tip" class=""></div></dt>
                         </dl>
                         <!-- <input type="hidden" name="9D0s0q8T3Q" value="8c5c3N" id="loginNonceId">
                         <div id="code_container" style="display:none;">
@@ -135,8 +142,8 @@
                         <p style="display: block;text-align: right;margin-right: 17px;">
                             <a href="javascript:;" style="line-height: 26px; text-decoration:underline; text-align: right;color: #666;">忘记密码？</a>
                         </p>
-                        <p style="text-align: center">
-                            <input type="submit" class="nlog_submit" value="点击登录" title="登录">
+                        <p style="text-align: center;cursor: pointer;">
+                            <input type="submit" class="nlog_submit" style="cursor: pointer;" value="点击登录" title="登录">
                         </p>
                         <p class="f_black" style="color: #999;margin-top: 10px;text-align: center;">使用合作网站账号登录优购：</p>
                         <p class="cop_link">
@@ -170,9 +177,9 @@
 
 
 
-
+<!-- 
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
-    <script src="./script/login.js"></script>
+    <script src="./script/login.js"></script> -->
 
 </body>
 

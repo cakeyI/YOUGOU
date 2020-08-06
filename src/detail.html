@@ -7,7 +7,7 @@
     <title>商品详情</title>
     <link rel="stylesheet" href="./css/common.css">
     <!-- 通用样式 -->
-    <link rel="stylesheet" href="css/goods.css">
+    <link rel="stylesheet" href="css/detail.css">
     <!-- 主页样式 -->
     <script src="./font/iconfont.js"></script>
     <style>
@@ -19,6 +19,7 @@
             overflow: hidden;
         }
     </style>
+    <script src="script/require.js" defer async="true" data-main="script/main.js" id="currentpage" currentmod="moddetail"></script>
 
 </head>
 
@@ -43,9 +44,15 @@
         </ul>
         <ul class="head_right">
             <li>
-                <a href="javascript:;" class="head_a">登录</a>
-                <span>&nbsp;/&nbsp;</span>
-                <a href="javascript:;" class="head_a">注册</a>
+                <div class="cookie" style="width: 150px;height: 40px;color: white; display: none;">
+                    <span style="color: white;height: 40px;line-height: 40px;"></span>
+                    <a href="javascript:;" class="head_a">退出</a>
+                </div>
+                <div class="regsitry">
+                    <a href="login.html" class="head_a">登录</a>
+                    <span>&nbsp;/&nbsp;</span>
+                    <a href="registry.html" class="head_a">注册</a>
+                </div>
             </li>
             <li>
 
@@ -55,7 +62,7 @@
             </li>
             <li>
 
-                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true">
+                <a href="cart.html" class="head_a"><svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-gouwudai"></use>
           </svg>购物车</a>
             </li>
@@ -87,7 +94,7 @@
                     <li class="nav_log" style="display: none;">
                         <a href="javascript:;"><img src="./img/logo.png" alt=""></a>
                     </li>
-                    <li class="nav_leftli "><a href="javascript:;">首页</a></li>
+                    <li class="nav_leftli "><a href="index.html">首页</a></li>
                     <li class="nav_leftli nav_sdown"><a href="javascript:;" class="nav_sdown1">女鞋</a></li>
                     <li class="nav_leftli nav_sdown"><a href="javascript:;" class="nav_sdown1">男鞋</a></li>
                     <li class="nav_leftli nav_sdown"><a href="javascript:;" class="nav_sdown1">运动</a></li>
@@ -424,7 +431,7 @@
                     <!-- 竖的七张图片 -->
                     <ul class="goods_col">
                         <!-- /* 移动出现类 .hover .border*/ -->
-                        <li class="border">
+                        <!-- <li class="border">
                             <svg class="icon hover" aria-hidden="true">
                                 <use xlink:href="#icon-right-fill2">
                                 </use>
@@ -466,7 +473,7 @@
                                 <img src="" alt="">
                                 <span class="iconfont icon-xxx"></span>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="goodsPic">
                         <div class="jqzoom" id="spec-n1" onclick="void(0)">
@@ -477,15 +484,16 @@
                                      </use>
                                 </svg> &ensp;查看大图
                             </p>
-                            <img id="pD-bimg" src="./img/app.jpg">
+                            <img id="pD-bimg">
                             <!-- 第一张大图 end -->
+                            <!-- 移动小图 -->
+                            <div class="ZoomMOVE">
+                            </div>
                         </div>
-                        <!-- 移动小图 -->
-                        <div class="ZoomMOVE">
-                        </div>
+
                         <!-- 移动大图 -->
-                        <div class="Zoomdiv" style="display: none;">
-                            <img src="" alt="">
+                        <div class="Zoomdiv">
+                            <img alt="">
                         </div>
                     </div>
                 </div>
@@ -494,16 +502,16 @@
                     <!-- logo -->
                     <div class="brand-logo">
                         <a href="#">
-                            <img src="" width="112" height="52">
+                            <img width="112" height="72">
                         </a>
                     </div>
                     <!-- 标题 -->
-                    <h1>adidas阿迪达斯中性EC ORG单肩包ED6877</h1>
+                    <h1></h1>
                     <!-- 价格 -->
                     <div class="good_ygprcarea clearfix">
                         <p class="price single_price" id="ygprice_area">
-                            <span id="yitianPrice" class="now symbol">¥<i>88</i></span>
-                            <del>¥77</del>
+                            <span id="yitianPrice" class="now symbol">¥<i></i></span>
+                            <del>¥<i></i></del>
                         </p>
                     </div>
                     <div class="summary-line"></div>
@@ -515,7 +523,7 @@
                                 <span class="span1" style="display: inline;">颜色：</span>
                                 <span class="prodSpec">
                                     <a class="select" href="#" data-name="黑"> 
-                                          <img  src=""  > 
+                                          <img    > 
                                           <svg class="icon" aria-hidden="true">
                                             <use xlink:href="#icon-dagou"></use>
                                           </svg>
@@ -743,8 +751,8 @@
             </div>
 
         </footer>
-        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
-        <script src="./script/goods.js "></script>
+        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
+        <script src="./script/goods.js "></script> -->
 
 </body>
 

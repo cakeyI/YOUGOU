@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- 通用样式 -->
     <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/pagination.css">
     <!-- 主页样式 -->
     <link rel="stylesheet" href="./font/iconfont.css">
     <script src="./font/iconfont.js"></script>
@@ -47,9 +48,15 @@
         </ul>
         <ul class="head_right">
             <li>
-                <a href="javascript:;" class="head_a">登录</a>
-                <span>&nbsp;/&nbsp;</span>
-                <a href="javascript:;" class="head_a">注册</a>
+                <div class="cookie" style="width: 150px;height: 40px;color: white; display: none;">
+                    <span style="color: white;height: 40px;line-height: 40px;"></span>
+                    <a href="javascript:;" class="head_a">退出</a>
+                </div>
+                <div class="regsitry">
+                    <a href="login.html" class="head_a">登录</a>
+                    <span>&nbsp;/&nbsp;</span>
+                    <a href="registry.html" class="head_a">注册</a>
+                </div>
             </li>
             <li>
 
@@ -59,7 +66,7 @@
             </li>
             <li>
 
-                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true">
+                <a href="cart.html" class="head_a"><svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-gouwudai"></use>
               </svg>购物车</a>
             </li>
@@ -91,7 +98,7 @@
                     <li class="nav_log" style="display: none;">
                         <a href="javascript:;"><img src="./img/logo.png" alt=""></a>
                     </li>
-                    <li class="nav_leftli "><a href="javascript:;">首页</a></li>
+                    <li class="nav_leftli "><a href="index.html">首页</a></li>
                     <li class="nav_leftli nav_sdown"><a href="javascript:;" class="nav_sdown1">女鞋</a></li>
                     <li class="nav_leftli nav_sdown"><a href="javascript:;" class="nav_sdown1">男鞋</a></li>
                     <li class="nav_leftli nav_sdown"><a href="javascript:;" class="nav_sdown1">运动</a></li>
@@ -424,139 +431,143 @@
                 <ul class="menu-list">
                     <li><a href="#">首页</a><span class="fenge">&nbsp;&gt;</span></li>
                     <li>
-                        <a href="#" title="女鞋">女鞋</a>
+                        <a href="#" title="女鞋">女包</a>
                     </li>
                 </ul>
             </div>
             <div class="filter-sub-wrap">
                 <!-- 侧边框 -->
-                <div class="filter-sub-navlist">
-                    <p>共<span>&gt;19980</span>个结果</p>
-                    <ul class="filter-sub-navlist_ul">
-                        <li>
-                            <p><svg class="icon" aria-hidden="true">
+                <div class="sidenav" style="position: relative;width: 180px;height: 1000px;">
+                    <div class="filter-sub-navlist">
+                        <p>共<span>&gt;19980</span>个结果</p>
+                        <ul class="filter-sub-navlist_ul">
+                            <li class="sideli">
+                                <p><svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-right-fill"></use>
                               </svg>&ensp;品牌</p>
-                        </li>
-                        <ul class="down_select_ul">
-                            <li>她他</li>
-                            <li>百丽</li>
-                            <li>百思图</li>
-                            <li>天美意</li>
-                            <li>思加图</li>
-                            <li>森达</li>
-                            <li>拔佳</li>
-                            <li>妙丽</li>
-                            <li>暇步士</li>
-                            <li>真美诗</li>
-                            <li>+ 多选</li>
-                        </ul>
-                        <li>
-                            <p><svg class="icon" aria-hidden="true">
+                            </li>
+                            <ul class="down_select_ul">
+                                <li>她他</li>
+                                <li>百丽</li>
+                                <li>百思图</li>
+                                <li>天美意</li>
+                                <li>思加图</li>
+                                <li>森达</li>
+                                <li>拔佳</li>
+                                <li>妙丽</li>
+                                <li>暇步士</li>
+                                <li>真美诗</li>
+                                <li>+ 多选</li>
+                            </ul>
+                            <li class="sideli">
+                                <p><svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-right-fill"></use>
                               </svg>&ensp;品类</p>
-                        </li>
-                        <ul class="down_select_ul">
-                            <li>她他</li>
-                            <li>百丽</li>
-                            <li>百思图</li>
-                            <li>天美意</li>
-                            <li>思加图</li>
-                            <li>森达</li>
-                            <li>拔佳</li>
-                            <li>妙丽</li>
-                            <li>暇步士</li>
-                            <li>真美诗</li>
-                            <li>+ 多选</li>
-                        </ul>
-                        <li>
-                            <p><svg class="icon" aria-hidden="true">
+                            </li>
+                            <ul class="down_select_ul">
+                                <li>她他</li>
+                                <li>百丽</li>
+                                <li>百思图</li>
+                                <li>天美意</li>
+                                <li>思加图</li>
+                                <li>森达</li>
+                                <li>拔佳</li>
+                                <li>妙丽</li>
+                                <li>暇步士</li>
+                                <li>真美诗</li>
+                                <li>+ 多选</li>
+                            </ul>
+                            <li class="sideli">
+                                <p><svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-right-fill"></use>
                           </svg>&ensp;价格</p>
-                        </li>
-                        <ul class="down_select_ul">
-                            <li>她他</li>
-                            <li>百丽</li>
-                            <li>百思图</li>
-                            <li>天美意</li>
-                            <li>思加图</li>
-                            <li>森达</li>
-                            <li>拔佳</li>
-                            <li>妙丽</li>
-                            <li>暇步士</li>
-                            <li>真美诗</li>
-                            <li>+ 多选</li>
-                        </ul>
-                        <li>
-                            <p><svg class="icon" aria-hidden="true">
+                            </li>
+                            <ul class="down_select_ul">
+                                <li>她他</li>
+                                <li>百丽</li>
+                                <li>百思图</li>
+                                <li>天美意</li>
+                                <li>思加图</li>
+                                <li>森达</li>
+                                <li>拔佳</li>
+                                <li>妙丽</li>
+                                <li>暇步士</li>
+                                <li>真美诗</li>
+                                <li>+ 多选</li>
+                            </ul>
+                            <li class="sideli">
+                                <p><svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-right-fill"></use>
                           </svg>&ensp;尺码</p>
-                        </li>
-                        <ul class="down_select_ul">
-                            <li>她他</li>
-                            <li>百丽</li>
-                            <li>百思图</li>
-                            <li>天美意</li>
-                            <li>思加图</li>
-                            <li>森达</li>
-                            <li>拔佳</li>
-                            <li>妙丽</li>
-                            <li>暇步士</li>
-                            <li>真美诗</li>
-                            <li>+ 多选</li>
-                        </ul>
-                        <li>
-                            <p><svg class="icon" aria-hidden="true">
+                            </li>
+                            <ul class="down_select_ul">
+                                <li>她他</li>
+                                <li>百丽</li>
+                                <li>百思图</li>
+                                <li>天美意</li>
+                                <li>思加图</li>
+                                <li>森达</li>
+                                <li>拔佳</li>
+                                <li>妙丽</li>
+                                <li>暇步士</li>
+                                <li>真美诗</li>
+                                <li>+ 多选</li>
+                            </ul>
+                            <li class="sideli">
+                                <p><svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-right-fill"></use>
                           </svg>&ensp;颜色</p>
-                        </li>
-                        <ul class="down_select_ul">
-                            <li>她他</li>
-                            <li>百丽</li>
-                            <li>百思图</li>
-                            <li>天美意</li>
-                            <li>思加图</li>
-                            <li>森达</li>
-                            <li>拔佳</li>
-                            <li>妙丽</li>
-                            <li>暇步士</li>
-                            <li>真美诗</li>
-                            <li>+ 多选</li>
-                        </ul>
-                        <li>
-                            <p><svg class="icon" aria-hidden="true">
+                            </li>
+                            <ul class="down_select_ul">
+                                <li>她他</li>
+                                <li>百丽</li>
+                                <li>百思图</li>
+                                <li>天美意</li>
+                                <li>思加图</li>
+                                <li>森达</li>
+                                <li>拔佳</li>
+                                <li>妙丽</li>
+                                <li>暇步士</li>
+                                <li>真美诗</li>
+                                <li>+ 多选</li>
+                            </ul>
+                            <li class="sideli">
+                                <p><svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-right-fill"></use>
                           </svg>&ensp;款式季节</p>
-                        </li>
-                        <ul class="down_select_ul">
-                            <li>她他</li>
-                            <li>百丽</li>
-                            <li>百思图</li>
-                            <li>天美意</li>
-                            <li>思加图</li>
-                            <li>森达</li>
-                            <li>拔佳</li>
-                            <li>妙丽</li>
-                            <li>暇步士</li>
-                            <li>真美诗</li>
-                            <li>+ 多选</li>
+                            </li>
+                            <ul class="down_select_ul">
+                                <li>她他</li>
+                                <li>百丽</li>
+                                <li>百思图</li>
+                                <li>天美意</li>
+                                <li>思加图</li>
+                                <li>森达</li>
+                                <li>拔佳</li>
+                                <li>妙丽</li>
+                                <li>暇步士</li>
+                                <li>真美诗</li>
+                                <li>+ 多选</li>
+                            </ul>
+                            <li class="">
+                                <p>
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-right-fill"></use>
+                                    </svg>&ensp;风格
+                                </p>
+                            </li>
                         </ul>
-                        <li>
-                            <p><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-right-fill"></use>
-                          </svg>&ensp;风格</p>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
                 <!-- 主内容 -->
                 <div class="main_content">
                     <ul class="main_content_ul">
-                        <li class="li boldli">新品</li>
+                        <li class="li boldli  mainli">默认</li>
                         <li class="li">热销</li>
                         <li class="li">推荐</li>
-                        <li class="li">价格</li>
-                        <li class="li">折扣</li>
-                        <li><span>1 - 75页 / </span><a href="#" style="color: black;">下一页></a></li>
+                        <li class="li mainli">价格up</li>
+                        <li class="li mainli">价格down</li>
+                        <li><span>1 - 3页 / </span><a href="#" style="color: black;">下一页></a></li>
                     </ul>
                     <div class="goodslist">
                         <!-- li里面套div hover显示背景颜色 -->
@@ -584,17 +595,17 @@
             </div>
 
         </div>
-        <div class="yema">
-            <div class="yema_content">
-                <a class="curr">1</a>
-                <a rel="nofollow" href="#">2</a>
-                <a rel="nofollow" href="#">3</a>
-                <a rel="nofollow" href="#">4</a>
-                <a rel="nofollow" href="#">5</a>
-                <a class="dot">...</a>
-                <a rel="nofollow" href="#">246</a>
-                <a rel="nofollow" href="#">247</a>
-                <a rel="nofollow" href="#l">下一页&gt;</a>
+        <!-- <div class="pagelist">
+            <div class="m-style page">
+                <a class="nofollow curr" href="javascript:;">1</a>
+                <a class="nofollow" rel=" nofollow " href="javascript:; ">2</a>
+                <a class="nofollow" rel="nofollow" href="javascript:;">3</a>
+                <a href="javascript:;" style="width: 90px;">下一页&gt;</a>
+            </div>
+        </div> -->
+        <!-- 分页的结构：css自由设计 -->
+        <div class="pagelist">
+            <div class="m-style page">
             </div>
         </div>
     </main>
@@ -768,7 +779,7 @@
     </footer>
     <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
     <script src="./script/list.js "></script> -->
-
+    <!-- <script src="script/jquery.pagination.js"></script> -->
 </body>
 
 </html>

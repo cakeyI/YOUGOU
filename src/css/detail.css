@@ -522,12 +522,23 @@
     border: 1px solid #ccc;
 }
 
-.goods_col li svg {
+.goods_col li.change:after {
+    content: "";
     position: absolute;
     top: 30px;
     right: -9px;
-    display: none;
+    width: 8px;
+    height: 12px;
+    background: url(../img/微信图片_20200805110748_03.png) no-repeat center center;
 }
+
+
+/* .goods_col li svg {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    color: white;
+} */
 
 .goods_col li img {
     width: 60px;
@@ -535,24 +546,25 @@
     border: none;
 }
 
-.goods_col li:hover {
-    border: 1px solid black;
-}
 
-
-/* 移动出现类 */
-
-
-/* .border {
+/* .goods_col li:hover {
     border: 1px solid black;
 } */
 
 
+/* 移动出现类 */
+
+.goodsblank .goods_col .border {
+    border: 1px solid black;
+}
+
+
 /* 图标箭头 */
 
-.goods_col li .hover {
-    display: block;
-}
+
+/* .goodsblank .goods_col li .hover {
+    color: black;
+} */
 
 .goodsPic {
     width: 485px;
@@ -565,12 +577,15 @@
 .ZoomMOVE {
     width: 50px;
     height: 50px;
-    opacity: 0.3;
+    opacity: 0.1;
     position: absolute;
     left: 0px;
     top: 0px;
     /* visibility: hidden; */
+    display: none;
     cursor: move;
+    z-index: 20;
+    background-color: black;
 }
 
 .Zoomdiv {
@@ -582,7 +597,19 @@
     left: 505px;
     top: 0;
     /* visibility: hidden; */
-    z-index: 5;
+    z-index: 98;
+    display: none;
+}
+
+.Zoomdiv img {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+}
+
+.jqzoom {
+    width: 485px;
+    height: 485px;
 }
 
 .jqzoom p {
@@ -592,8 +619,8 @@
     height: 20px;
     background-color: white;
     z-index: 5000;
-    bottom: 5px;
-    right: 5px;
+    bottom: 10px;
+    right: 0px;
     vertical-align: center;
     /* display: inline-flexbox; */
     display: flex;
@@ -602,8 +629,8 @@
 }
 
 #pD-bimg {
-    width: 480px;
-    height: 480px;
+    width: 485px;
+    height: 485px;
     border-image-width: 0;
 }
 

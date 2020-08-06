@@ -1,5 +1,6 @@
 <?php
-
+ header('Access-Control-Allow-Origin:*');//任意域名访问
+ header('Access-Control-Allow-Method:POST,GET');//允许的请求方式
     // 设置字符编码。
     header('content-type:text/html;charset=utf-8');
     //利用php操作数据库

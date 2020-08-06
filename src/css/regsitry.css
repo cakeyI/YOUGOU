@@ -102,6 +102,7 @@
     padding: 0px 0px 0px 8px;
     width: 338px;
     height: 66px;
+    position: relative;
 }
 
 .nreg_item dd {
@@ -120,6 +121,13 @@
     width: 313px;
     float: left;
     position: relative;
+}
+
+
+/* onblur事件 */
+
+.blur {
+    border: 1px solid black;
 }
 
 .pwdStrength em {
@@ -187,4 +195,48 @@
     FONT-FAMILY: Arial, Verdana;
     margin-top: 20px;
     overflow: hidden;
+}
+
+.errortips {
+    /* background-position: -180px -95px; */
+    color: #333;
+    margin-top: 4px;
+    display: inline-block;
+    text-indent: 25px;
+    line-height: 18px;
+    height: 18px;
+    background: url(../img/微信图片_20200805213211.png) no-repeat left center;
+    /* background-color: blue; */
+}
+
+.righttips {
+    margin-top: 0;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding-left: 25px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    color: #009645;
+    /* background-position: -314px 0; */
+    background: url(../img/微信图片_20200805213930正确.png) no-repeat center center;
+}
+
+
+/* 密码强度 */
+
+#pwdStrength .tip1 {
+    background: red;
+    color: white;
+}
+
+#pwdStrength .tip2 {
+    background: #febd04;
+    color: white;
+}
+
+#pwdStrength .tip3 {
+    background: #094;
+    color: white;
 }

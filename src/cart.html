@@ -17,7 +17,7 @@
             overflow: hidden;
         }
     </style>
-
+    <script src="script/require.js" defer async="true" data-main="script/main.js" id="currentpage" currentmod="modcart"></script>
 </head>
 
 <body>
@@ -41,9 +41,15 @@
         </ul>
         <ul class="head_right">
             <li>
-                <a href="javascript:;" class="head_a">登录</a>
-                <span>&nbsp;/&nbsp;</span>
-                <a href="javascript:;" class="head_a">注册</a>
+                <div class="cookie" style="width: 150px;height: 40px;color: white; display: none;">
+                    <span style="color: white;height: 40px;line-height: 40px;"></span>
+                    <a href="javascript:;" class="head_a">退出</a>
+                </div>
+                <div class="regsitry">
+                    <a href="login.html" class="head_a">登录</a>
+                    <span>&nbsp;/&nbsp;</span>
+                    <a href="registry.html" class="head_a">注册</a>
+                </div>
             </li>
             <li>
 
@@ -53,7 +59,7 @@
             </li>
             <li>
 
-                <a href="javascript:;" class="head_a"><svg class="icon" aria-hidden="true">
+                <a href="cart.html" class="head_a"><svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-gouwudai"></use>
                   </svg>购物车</a>
             </li>
@@ -76,7 +82,7 @@
     <div class="logo_head">
         <div class="logo_head_content">
             <h2 class="logo_head_log">
-                <a href="https://www.yougou.com"><img src="./img/signin-register-logo.png" alt=""></a>
+                <a href="index.html"><img src="./img/signin-register-logo.png" alt=""></a>
             </h2>
             <p class="logo_head_p">
                 <!-- 用户登录 -->
@@ -102,7 +108,7 @@
                 <tr>
                     <th>
                         <label class="ygChkbox">
-                            <input class="checkbox" type="checkbox"  checked="checked">
+                            <input type="checkbox"  class="checkbox allselect"  >
                                 全选
                         </label>
                     </th>
@@ -118,9 +124,10 @@
             </thead>
             <tbody>
 
+                <div class="tbodydiv"></div>
 
                 <!-- 从这里渲染tr -->
-                <tr>
+                <!-- <tr>
                     <td id="tr_td" colspan="7">
                         <div class="td_div">
                             <input type="checkbox" class="checkbox">
@@ -200,13 +207,13 @@
                             </div>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
 
         <div class="shpcrt_operations">
             <label class="ygChkbox">
-                        <input class="none" type="checkbox">
+                        <input type="checkbox" class="allselect checkbox" >
                             全选
              </label>
             <a class="JsFavorite" href="javascript:;">移入收藏夹</a>
@@ -222,7 +229,7 @@
             </div>
             <div class="fr">
                 <strong>总计（不含运费
-                    ）：</strong><strong class="cgray f16">¥</strong><strong class="corg f20">319</strong>
+                    ）：</strong><strong class="cgray f16">¥</strong><strong class="corg f20 allprice">9999</strong>
                 <a href="javascript:;" class="cart_b_paybtn ml10 ">去结算</a>
             </div>
         </div>
@@ -245,8 +252,8 @@
 
 
 
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
-    <script src="./script/cart.js"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js "></script>
+    <script src="./script/cart.js"></script> -->
 
 </body>
 

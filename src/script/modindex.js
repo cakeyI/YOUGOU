@@ -1,6 +1,34 @@
 define([], function() {
     return {
         init: function() {
+            //导航栏悬浮--------------------------------------------------------------------------------------
+            const nav = $('.nav')
+            const log = document.querySelector('.nav_log')
+                //设置监听事件;
+            $(window).scroll(function() {
+                let scrollHeight = $(document).scrollTop();
+                // console.log(scrollHeight)
+                if (scrollHeight > 200) {
+                    nav.addClass("box");
+                    log.style.display = 'block';
+
+                } else if (scrollHeight < 200) {
+                    nav.removeClass("box");
+                    log.style.display = 'none';
+                }
+                //scrollHeight > 100 ? navtive.addClass("box") : navtive.removeClass("box");
+            });
+            let scrollHeight = $(document).scrollTop();
+
+            if (scrollHeight > 200) {
+                nav.addClass("box");
+                log.style.display = 'block';
+
+            } else if (scrollHeight < 200) {
+                nav.removeClass("box");
+                log.style.display = 'none';
+            }
+
             //标题下拉二维码
             $('.heada1').on('mousemove', function() {
                 $('.codeOne').show()
@@ -13,11 +41,27 @@ define([], function() {
                 $('.codeTwo').hide()
             });
             $('.heada3').on('mousemove', function() {
-                    $('.notice').show()
-                }).on('mouseout', function() {
-                    $('.notice').hide()
+                $('.notice').show()
+            }).on('mouseout', function() {
+                $('.notice').hide()
+            })
+
+            // 设置用户cookie信息
+            if ($.cookie('username')) { //存在
+                $('.regsitry').css('display', 'none')
+                $('.cookie').css('display', 'block');
+                $('.cookie').find('span').html($.cookie('username'))
+            }
+            $('.cookie').find('a').on('click', function() {
+                $.cookie('username', null, {
+                    expires: -1,
+                    path: '/'
                 })
-                // 二级菜单下拉
+                $('.regsitry').css('display', 'block')
+                $('.cookie').css('display', 'none');
+            })
+
+            // 二级菜单下拉-------------------------------------------------------------------------------------
             let $btns = $('.nav_sdown')
                 // console.log($btns.length);
             let $items = $('.nav_downSelect');
@@ -68,7 +112,7 @@ define([], function() {
                     }, 'fast')
                 }, 100)
             });
-            //轮播图
+            //轮播图--------------------------------------------------------------------------------------------
             const $pi = $('.pic')
             const $pic = $('.lunbo')
             const $pichover1 = $('.pichover1')
@@ -107,41 +151,7 @@ define([], function() {
             });
 
 
-
-
-
-            // // list 渲染
-            // const goodslist = $('.np_render1');
-
-            // $.ajax({
-            //     url: 'http://localhost/yougou/php/yougoudate.php',
-            //     dataType: 'json'
-            // }).done(function(data) {
-            //     let strhtml = '<ul class="np_ul np_ul1">';
-            //     $.each(data, function(index, value) {
-            //         strhtml += `
-            //          <li>
-            //              <div>
-            //                  <img src="${value.url}" alt="" >
-            //              </div>
-            //              <img src="${value.logourl}" alt="" >
-            //              <p class="np_content_1_p1">${value.smalltitle}</p>
-            //              <p class="np_content_1_p2">￥&ensp;<span>${value.price}</span></p>
-            //              <svg class="icon" aria-hidden="true">
-            //                  <use xlink:href="#icon-shoucang
-            //                  "></use>
-            //              </svg>
-            //          </li>
-            //      `;
-            //     });
-            //     strhtml += '</ul>';
-            //     goodslist.html(strhtml);
-            //     // $(function() {
-            //     //     $("img.lazy").lazyload({ effect: "fadeIn" });
-            //     // });
-            // });
-
-            // 内容按钮切换
+            // 内容按钮切换---------------------------------------------------------------------------------------
             const $tabsa = $('.tabsa')
             const $tabsb = $('.tabsb')
             const $mp_content = $('.mp_content')
@@ -281,7 +291,6 @@ define([], function() {
             })
 
 
-            // 新品推荐渲染
 
 
 
